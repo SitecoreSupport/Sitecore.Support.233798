@@ -133,7 +133,11 @@
                                     id: segmentDefinition.Id,
                                     name: segmentDefinition.Name,
                                     xmlRules: segmentDefinition.RulesXml
-                                });;
+																													});;
+
+																													// Sitecore Support #233798		
+																													var rootItemID = current.UrlParser.getParameterFromLocationSearchByName("id");
+																													current.initializeContacts(rootItemID);
                             }
                         }
 
